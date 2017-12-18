@@ -16,10 +16,10 @@
             <input type="submit" value="submit" />
         </form>
     </div>
-    <div th:if="${bean != null}">
-        <div th:text="${bean['name']}"></div>
-        <div th:text="${bean.name}"></div>
-        <div th:text="${bean.getValue()}"></div>
+    <div th:if="${bookBean != null}">
+        <div th:text="${bookBean['name']}"></div>
+        <div th:text="${bookBean.name}"></div>
+        <div th:text="${bookBean.getValue()}"></div>
     </div>
 </body>
 </html>

@@ -5,6 +5,15 @@ public class BookBean {
     public String author;
     public String price;
 
+    public BookBean() {
+    }
+
+    public BookBean(String name, String author, String price) {
+        this.name = name;
+        this.author = author;
+        this.price = price;
+    }
+
     public String getName() {
         return name;
     }

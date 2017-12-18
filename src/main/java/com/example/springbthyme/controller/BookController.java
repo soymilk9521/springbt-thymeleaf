@@ -35,13 +35,10 @@ public class BookController {
         }
     }
 
-    @RequestMapping("obj")
+    @RequestMapping("bookBean")
     public String passBook(Model model){
-        BookBean bean = new BookBean();
-        bean.setName("Javascript");
-        bean.setAuthor("Martin");
-        bean.setPrice("222");
-        model.addAttribute("bean",bean );
+        BookBean bookBean = new BookBean("javacript", "karl", "222");
+        model.addAttribute("bookBean", bookBean);
         return "books/java";
     }
 }
