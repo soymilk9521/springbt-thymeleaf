@@ -3,8 +3,32 @@
 <head>
     <meta charset="UTF-8" />
     <title>Hello</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        $(function () {
+            var sl = [[${lang}]];
+            $('select option').each(function (e) {
+               if ($(this).val() === sl ) {
+                   $(this).attr("selected","selected");
+               }
+            });
+        });
+        /*]]>*/
+    </script>
 </head>
 <body>
+<div>
+    <form action="/hello">
+        <select th:name="lang" id="lang">
+            <option value="zh_CN">Chinese</option>
+            <option value="ja_JP">Japanese</option>
+            <option value="en_US">English</option>
+        </select>
+        <input type="submit" th:value="change" />
+    </form>
+
+</div>
 <p><label th:text="#{welcome}"></label></p>
 <p><label th:text="${language}"></label></p>
 <p><label th:text="${displayLanguage}"></label></p>
