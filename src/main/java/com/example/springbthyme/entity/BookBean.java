@@ -1,4 +1,4 @@
-package com.example.springbthyme.domain;
+package com.example.springbthyme.entity;
 
 public class BookBean {
     public String name;

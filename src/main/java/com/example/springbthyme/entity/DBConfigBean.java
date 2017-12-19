@@ -6,7 +6,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @ConfigurationProperties(prefix = "com.config.database")
-@PropertySource("classpath:config/database.properties")
+@PropertySource("classpath:config/config.properties")
 public class DBConfigBean {
     public String url;
     public String driver;

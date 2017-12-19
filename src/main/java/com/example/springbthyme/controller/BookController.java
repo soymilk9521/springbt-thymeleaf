@@ -1,6 +1,6 @@
 package com.example.springbthyme.controller;
 
-import com.example.springbthyme.domain.BookBean;
+import com.example.springbthyme.entity.BookBean;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;

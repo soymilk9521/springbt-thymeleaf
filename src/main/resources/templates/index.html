@@ -5,17 +5,21 @@
     <title>index</title>
 </head>
 <body>
-    <p>hello, spring boot!</p>
-    <table>
-        <thead>
-            <tr th:each="list : ${name}">
-                <th th:text="${listStat.index}">No.</th>
-                <th th:text="${list}">Content</th>
-            </tr>
-        </thead>
-        <tbody>
+    <div th:include="components/header :: header"></div>
+    <div class="container">
+        <p>hello, spring boot!</p>
+        <table>
+            <thead>
+                <tr th:each="list : ${name}">
+                    <th th:text="${listStat.index}">No.</th>
+                    <th th:text="${list}">Content</th>
+                </tr>
+            </thead>
+            <tbody>
 
-        </tbody>
-    </table>
+            </tbody>
+        </table>
+    </div>
+    <div th:include="components/footer :: footer"></div>
 </body>
 </html>
