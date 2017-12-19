@@ -1,20 +1,41 @@
 package com.example.springbthyme.entity;
 
 import org.springframework.boot.context.properties.ConfigurationProperties;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
-@ConfigurationProperties(prefix = "com.config.demo")
+@Configuration
+@ConfigurationProperties(prefix = "com.config.database")
+@PropertySource("classpath:config/config.properties")
 public class ConfigBean {
-
+    public String url;
+    public String driver;
     public String username;
     public String password;
-    public String userpass;
+    public String urlscheme;
 
-    public String getUserpass() {
-        return userpass;
+    public String getUrlscheme() {
+        return urlscheme;
     }
 
-    public void setUserpass(String userpass) {
-        this.userpass = userpass;
+    public void setUrlscheme(String urlscheme) {
+        this.urlscheme = urlscheme;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getDriver() {
+        return driver;
+    }
+
+    public void setDriver(String driver) {
+        this.driver = driver;
     }
 
     public String getUsername() {

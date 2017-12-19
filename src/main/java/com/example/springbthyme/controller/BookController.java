@@ -17,11 +17,11 @@ public class BookController {
 
     private static final Logger logger = LoggerFactory.getLogger(BookController.class);
 
-    @RequestMapping("/java")
+    @RequestMapping("/book")
     public String getJavaCore(@RequestParam(value = "core", required = false) String core, Model model) {
         logger.info("core",core);
         model.addAttribute("core", core);
-        return "books/java";
+        return "books/book";
     }
 
     @RequestMapping(value = "list", method = RequestMethod.POST)
@@ -31,7 +31,7 @@ public class BookController {
             return "error";
         }else {
             model.addAttribute("book", book);
-            return "books/java";
+            return "books/book";
         }
     }
 
@@ -39,6 +39,6 @@ public class BookController {
     public String passBook(Model model){
         BookBean bookBean = new BookBean("javacript", "karl", "222");
         model.addAttribute("bookBean", bookBean);
-        return "books/java";
+        return "books/book";
     }
 }
