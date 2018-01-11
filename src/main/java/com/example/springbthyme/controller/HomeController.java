@@ -13,7 +13,7 @@ import java.util.List;
 
 @Controller
 public class HomeController {
-    @RequestMapping("/")
+    @RequestMapping("/home/index")
     public String index(ModelMap map) {
         List<String> strList = new ArrayList<String>();
         strList.add("Java");
